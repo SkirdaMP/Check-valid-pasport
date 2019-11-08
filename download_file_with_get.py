@@ -54,6 +54,7 @@ def passport_validity_check(pasport_serie, pasport_num):
             get_answer = soup_1.find("h4", {'class': "ct-h4"}).text
             print(get_answer)
             session.cookies.clear_session_cookies()
-    return ReCaptha
-    # with open("C:/Users/Skirda/Desktop/1_1.txt", "w") as text:
-    #     text.write(reCaptha)
+    return get_answer
+
+with open("C:/Users/Skirda/Desktop/1_1.txt", "w") as text:
+    text.write(passport_validity_check("4612","962295"))
